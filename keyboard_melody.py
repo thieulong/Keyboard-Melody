@@ -3,7 +3,7 @@ from pynput.keyboard import Key, Listener
 
 pygame.init()
 
-song = 'iphone_ringtone.txt'
+song = 'fur_elise.txt'
 
 sound_file = 'Piano'
 
