@@ -3,7 +3,7 @@ from pynput.keyboard import Key, Listener
 
 pygame.init()
 
-song = 'fur_elise.txt'
+song = 'iphone_ringtone.txt'
 
 sound_file = 'Piano'
 
@@ -27,7 +27,12 @@ melody = read_melody(filename=song)
 
 def sharp_cvtr(notes):
 
-    notes = notes.replace(notes[0],chr(ord(notes[0])+1).lower())
+    if notes[0].lower() == 'g':
+        notes = notes.replace(notes[0],chr(ord(notes[0])-6).lower())
+
+    else:
+        notes = notes.replace(notes[0],chr(ord(notes[0])+1).lower())
+
     notes = notes.replace('#','b')
 
     return notes
